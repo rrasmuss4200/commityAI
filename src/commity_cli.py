@@ -39,11 +39,6 @@ class GitCommitCLI:
             action="store_true",
             help="Review and edit the generated message before committing"
         )
-        parser.add_argument(
-            "--debug",
-            action="store_true",
-            help="Show debug information"
-        )
 
         args = parser.parse_args()
 
