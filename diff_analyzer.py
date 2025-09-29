@@ -1,10 +1,5 @@
 import subprocess
-import sys
-import argparse
-import os
-import json
-from typing import Optional, Dict, Any
-import requests
+from typing import Dict, Any
 
 class GitDiffAnalyzer:
 
@@ -52,10 +47,3 @@ class GitDiffAnalyzer:
                 "insertions": line_insertertions,
                 "deletions": line_deletions,
                 "files": files}
-
-def main():
-    an = GitDiffAnalyzer()
-    print(an.get_diff_summary(an.get_staged_diff()))
-
-if __name__ == "__main__":
-    main()
