@@ -10,23 +10,18 @@ An AI CLI tool that takes staged changes to git and creates a commit message fro
 4. `git add` you want the AI to generate a commit message for
 5. Run: `python main.py`
 
-## Alternative Installation (as package)
-1. Create a directory with both files
-2. Run: `pip install -e .`
-3. Use anywhere: `commityai`
-
 ## Usage Examples:
 
 ### Basic usage
 export OPENAI_API_KEY=sk-...
 git add .
-python git_commit_ai.py
+python src/main.py
 
 ### Dry run (don't commit, just show message)
-python git_commit_ai.py --dry-run
+python src/main.py --dry-run
 
 ### Interactive mode (review before commit)
-python git_commit_ai.py -i
+python src/main.py -i
 
 ### Pass API key directly (not recommended)
-python git_commit_ai.py --api-key sk-...
+python src/main.py --api-key sk-...

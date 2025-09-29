@@ -1,5 +1,5 @@
-from diff_analyzer import GitDiffAnalyzer
-from commit_generator import CommitGenerator
+from .diff_analyzer import GitDiffAnalyzer
+from .commit_generator import CommitGenerator
 
 import argparse
 import os
@@ -69,9 +69,6 @@ class GitCommitCLI:
                 sys.exit(1)
 
             summary = self.analyzer.get_diff_summary(diff)
-            if args.debug:
-                print(f"Debug - Summary: {summary}")
-                print(f"Debug - Diff preview: {diff[:200]}...")
             print(f"Found {summary['files_changed']} changed file(s)")
 
             # Generate commit message
