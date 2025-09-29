@@ -81,7 +81,7 @@ class GitCommitCLI:
 
             # Generate commit message
             print("Generating commit message...")
-            generator = CommitGenerator(api_key, args.provider)
+            generator = CommitGenerator(api_key)
             message = generator.generate_commit_msg(diff, summary)
 
             print("\nGenerated commit message:")
