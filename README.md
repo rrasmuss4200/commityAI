@@ -13,15 +13,20 @@ An AI CLI tool that takes staged changes to git and creates a commit message fro
 ## Usage Examples:
 
 ### Basic usage
+```
 export OPENAI_API_KEY=sk-...
 git add .
 python src/main.py
+```
 
 ### Dry run (don't commit, just show message)
-python src/main.py --dry-run
+`python src/main.py --dry-run`
 
 ### Interactive mode (review before commit)
-python src/main.py -i
+`python src/main.py -i`
 
 ### Pass API key directly (not recommended)
-python src/main.py --api-key sk-...
+`python src/main.py --api-key sk-...`
+
+## Package as binary (Alternative)
+`pip install -e .`
